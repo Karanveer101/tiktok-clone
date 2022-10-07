@@ -1,0 +1,17 @@
+@media only screen and (max-width: 500px) {
+  .Sidebar {
+    display: none;
+  }
+  .user {
+    padding-left: 0;
+  }
+
+  .header {
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .uploadBtn {
+    margin-left: 10px;
+  }
+}

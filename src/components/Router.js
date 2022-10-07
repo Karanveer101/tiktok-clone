@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import App from './App';
 import Upload from './Upload';
+
 function Router(props) {
   const [decoded, setDecoded] = useState('');
   const [isSignIn, setIsSignIn] = useState();

@@ -1,6 +1,7 @@
 import Header from './Header';
 import Main from './Main';
 import React, { useState, useEffect } from 'react';
+import '../styles/Media.css';
 
 function App(props) {
   const { decoded, setDecoded, isSignIn, setIsSignIn } = props;
