@@ -13,6 +13,20 @@
   z-index: 2;
 }
 
+.mobileHeader {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.mobileHeader div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .logo {
   height: 36px;
 }
@@ -83,6 +97,15 @@ input::placeholder {
   font-weight: bold;
 }
 
+.expandedHamburger .uploadBtn {
+  border: 1px solid lightgray;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+}
 a:-webkit-any-link {
   text-decoration: none;
 }
@@ -93,6 +116,43 @@ a:-webkit-any-link {
 
 .profilePhoto {
   height: 1.8rem;
+}
+
+.mobileHeader .flexLogo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexLogo button {
+  margin-left: 10px;
+  background: 0;
+  border: none;
+  font-size: 24px;
+}
+
+.flexLogo img {
+  margin-right: 10px;
+}
+
+.expandedHamburger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.expandedHamburger button {
+  background: 0;
+  border: none;
+  font-size: 24px;
+}
+
+.expandedHamburger .loginBtn {
+  background: #fe2c55;
+  color: white;
+  font-weight: bold;
+  border-radius: 2px;
+  font-size: 1rem;
+  padding: 5px;
 }
 
 .accountBtns .loginBtn {

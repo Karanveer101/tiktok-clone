@@ -24,6 +24,7 @@ function App(props) {
         setDecoded={setDecoded}
         isSignIn={isSignIn}
         setIsSignIn={setIsSignIn}
+        screenWidth={screenWidth}
       />
       <Main screenWidth={screenWidth} />
     </div>

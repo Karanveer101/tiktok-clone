@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Header.css';
-import { AiOutlineSearch, AiOutlinePlus } from 'react-icons/ai';
+import { AiOutlineSearch, AiOutlinePlus, AiOutlineMenu } from 'react-icons/ai';
 import { FiSend } from 'react-icons/fi';
 import { BiMessageDetail } from 'react-icons/bi';
 import Login from './Login';
@@ -9,8 +9,10 @@ import { getAuth, signOut } from 'firebase/auth';
 import { GoSignOut } from 'react-icons/go';
 
 function Header(props) {
+  const [isHamburgerClicked, setIsHamburgerClicked] = useState(false);
+  console.log(isHamburgerClicked);
   const [SignInPopUp, setSignInPopUp] = useState(false);
-  const { isSignIn, setIsSignIn } = props;
+  const { isSignIn, setIsSignIn, screenWidth } = props;
   console.log(setIsSignIn);
   const [photoURL, setPhotoURL] = useState();
   const auth = getAuth();
@@ -62,7 +64,49 @@ function Header(props) {
     </button>
   );
 
-  return (
+  const hamburgerExpanded = (
+    <div className='expandedHamburger'>
+      <Link onClick={handleUploadBtn} to='/upload'>
+        <button className='uploadBtn'>
+          <AiOutlinePlus />
+          Upload
+        </button>
+      </Link>
+
+      {SignInPopUp ? (
+        <Login setIsSignIn={setIsSignIn} setSignInPopUp={setSignInPopUp} />
+      ) : (
+        ''
+      )}
+      {isSignIn ? signedIn : signedOut}
+
+      <button onClick={handleSignOut}>
+        <GoSignOut />
+      </button>
+    </div>
+  );
+
+  const mobileHeader = (
+    <div className='mobileHeader'>
+      <div className='flexLogo'>
+        <button onClick={() => setIsHamburgerClicked((current) => !current)}>
+          <AiOutlineMenu />
+        </button>
+
+        <Link to='/'>
+          <img
+            className='logo'
+            src={require('../images/tiktok.png')}
+            alt='logo'
+          />
+        </Link>
+      </div>
+
+      {isHamburgerClicked ? hamburgerExpanded : ''}
+    </div>
+  );
+
+  const header = (
     <div className='header'>
       <Link to='/'>
         <img
@@ -106,6 +150,9 @@ function Header(props) {
         </button>
       </div>
     </div>
+  );
+  return (
+    <div className='wrapper'>{screenWidth < 500 ? mobileHeader : header}</div>
   );
 }
 export default Header;
