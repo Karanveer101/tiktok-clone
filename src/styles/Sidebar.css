@@ -1,0 +1,16 @@
+.Sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 57px;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  gap: 20px;
+  border-right: 1px solid lightgray;
+}
+
+.Sidebar button {
+  background: 0;
+  border: none;
+  font-size: 24px;
+}

@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+}
+.Upload {
+  background-color: #f1f1f2;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.uploadContent {
+  background-color: white;
+  padding-top: 75px;
+  box-sizing: border-box;
+  height: inherit;
+  max-width: 1000px;
+  width: 100%;
+  padding-left: 50px;
+  display: flex;
+}
+
+.videoUpload {
+  width: 200px;
+  margin-top: 40px;
+  height: 350px;
+  padding: 25px 25px 25px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid lightgray;
+  border-style: dashed;
+}
+
+.videoUpload:hover {
+  border-color: #fe2c55;
+}
+
+.videoUpload p {
+  font-size: 0.9rem;
+  line-height: 30px;
+  text-align: center;
+  color: gray;
+}
+
+h4 {
+  text-align: center;
+}
+
+.uploadIcon {
+  font-size: 35px;
+}
+
+.videoUpload div {
+  display: flex;
+  justify-content: center;
+}
+
+.selectFileBtn {
+  background: #fe2c55;
+  border: none;
+  font-size: 1.1rem;
+  padding: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+#caption {
+  display: block;
+  box-sizing: border-box;
+  width: 636px;
+  height: 30px;
+  border: 1px solid lightgray;
+  margin-top: 10px;
+}
+
+.videoInfo label {
+  font-weight: bold;
+}
+
+.videoInfo {
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-top: 240px;
+}
+
+.postBtn {
+  background: #fe2c55;
+  border: none;
+  font-size: 1.1rem;
+  padding: 4px;
+  color: white;
+  font-weight: bold;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  width: 130px;
+  float: right;
+  margin-right: 40px;
+}
+
+.discardBtn {
+  border: 1px solid lightgray;
+  font-size: 1.1rem;
+  padding: 4px;
+  color: white;
+  font-weight: bold;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  width: 130px;
+  float: right;
+  margin-right: 40px;
+  background-color: white;
+  color: black;
+}
+
+.uploadVideoTitle {
+  margin-bottom: 10px;
+}
+
+.uploadProgress {
+  color: #fe2c55;
+}
+@media only screen and (max-width: 850px) {
+  .uploadContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .videoInfo {
+    padding-top: 10px;
+  }
+
+  #caption {
+    width: 80vw;
+  }
+
+  .uploadContent {
+    padding-left: 0;
+  }
+}
