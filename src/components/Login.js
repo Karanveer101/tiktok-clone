@@ -1,5 +1,5 @@
 import React from 'react';
-import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import { GoogleAuthProvider, getAuth, signInWithRedirect } from 'firebase/auth';
 import { doc, getFirestore, setDoc, getDoc } from 'firebase/firestore';
 import { app } from './Firebase';
 
@@ -9,8 +9,9 @@ function Login(props) {
   const db = getFirestore(app);
 
   const auth = getAuth();
-  signInWithPopup(auth, provider)
+  signInWithRedirect(auth, provider)
     .then(async (result) => {
+      console.log(result);
       const currentUser = auth.currentUser.uid;
       const docRef = doc(db, 'users', `${currentUser}`);
       const docSnap = await getDoc(docRef);
