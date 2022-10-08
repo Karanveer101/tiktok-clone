@@ -1,5 +1,10 @@
 import React from 'react';
-import { GoogleAuthProvider, getAuth, signInWithRedirect } from 'firebase/auth';
+import {
+  GoogleAuthProvider,
+  getAuth,
+  signInWithRedirect,
+  getRedirectResult,
+} from 'firebase/auth';
 import { doc, getFirestore, setDoc, getDoc } from 'firebase/firestore';
 import { app } from './Firebase';
 
@@ -9,7 +14,8 @@ function Login(props) {
   const db = getFirestore(app);
 
   const auth = getAuth();
-  signInWithRedirect(auth, provider)
+  signInWithRedirect(auth, provider);
+  getRedirectResult(auth)
     .then(async (result) => {
       console.log(result);
       const currentUser = auth.currentUser.uid;
