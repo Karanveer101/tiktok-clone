@@ -65,7 +65,7 @@ function Header(props) {
   );
 
   const hamburgerExpanded = (
-    <div className='expanded'>
+    <div className='expandedHamburger'>
       <Link onClick={handleUploadBtn} to='/upload'>
         <button className='uploadBtn'>
           <AiOutlinePlus />
