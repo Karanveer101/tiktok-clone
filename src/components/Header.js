@@ -96,7 +96,7 @@ function Header(props) {
         <Link to='/'>
           <img
             className='logo'
-            src={require('../images/tiktok.png')}
+            src={require('../images/coollogo_com-40124216.png')}
             alt='logo'
           />
         </Link>
@@ -111,7 +111,7 @@ function Header(props) {
       <Link to='/'>
         <img
           className='logo'
-          src={require('../images/tiktok.png')}
+          src={require('../images/coollogo_com-40124216.png')}
           alt='logo'
         />
       </Link>
